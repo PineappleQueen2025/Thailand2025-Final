@@ -1,85 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Thailand2025 – Reiseplan</title>
+  <title>Thailand 2025 – Reiseplan</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Nuvola_apps_kweather.svg/64px-Nuvola_apps_kweather.svg.png">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
+      background: linear-gradient(to bottom, #ffffff, #e6fdfc);
+      max-width: 960px;
       margin: auto;
       padding: 2em;
-      background: linear-gradient(to bottom, #fefefe 0%, #e6fdfc 100%);
-      color: #333;
-      animation: fadeIn 0.6s ease-in;
+      color: #222;
     }
-    h1, h2, h3 {
+    h1, h2 {
+      color: #008066;
+    }
+    .section {
+      margin-bottom: 2em;
+    }
+    .toggle {
+      cursor: pointer;
       color: #007f73;
+      text-decoration: underline;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    .details {
+      display: none;
+      margin-top: 0.5em;
+      border-left: 4px solid #a3e4d7;
+      padding-left: 1em;
     }
     img.header {
       width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1.5em;
+      border-radius: 10px;
+      margin-bottom: 1em;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    ul { padding-left: 1.2em; }
-    .section { margin-top: 2em; }
-    .toggle { margin: 1em 0; cursor: pointer; color: #007f73; text-decoration: underline; }
-    .details { display: none; margin-top: 0.5em; padding-left: 1em; border-left: 3px solid #c2ede6; }
   </style>
   <script>
-    function toggleDetails(id) {
+    function toggle(id) {
       const el = document.getElementById(id);
       el.style.display = el.style.display === 'none' ? 'block' : 'none';
     }
   </script>
 </head>
 <body>
-  <img class="header" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Strandbild">
-  <h1>🌴 Thailand Reiseplan 2025: Khanom, Koh Samui & Koh Phangan</h1>
+  <img class="header" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Strandbild Thailand">
+
+  <h1>🌴 Thailand Reiseplan 2025</h1>
 
   <div class="section">
-    <h2>📅 Tagesetappen mit Details</h2>
-    <p class="toggle" onclick="toggleDetails('d1')">🐬 09.09. Rosa Delfin-Bootstour in Khanom</p>
+    <h2>📅 Reiseübersicht</h2>
+    <ul>
+      <li>07.–09.09. Khanom: Erholung, rosa Delfine</li>
+      <li>10.–12.09. Koh Samui: Elefanten, Buddha, Dschungel</li>
+      <li>13.–14.09. Koh Phangan: Strände & Natur</li>
+      <li>15.–19.09. Khanom: Entspannung, Kochkurs, Kajak</li>
+      <li>20.09. Rückreise</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗺️ Tagesdetails</h2>
+
+    <div class="toggle" onclick="toggle('d1')">🐬 09.09. Rosa Delfin-Bootstour in Khanom</div>
     <div id="d1" class="details">
-      Morgens ca. 3–4 h Bootstour mit Beobachtung der seltenen rosa Delfine. Abfahrt früh ab Hotel. Nachmittags Strandzeit oder Massage.
+      Morgens: Bootstour (3–4 Stunden) zur Sichtung der rosa Delfine.<br>
+      Nachmittags: Freizeit, z. B. Strand oder Massage.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d2')">🐘 11.09. Elefantencamp & Dschungelwanderung (Samui Elephant Sanctuary)</p>
+    <div class="toggle" onclick="toggle('d2')">🚢 10.09. Transfer nach Koh Samui</div>
     <div id="d2" class="details">
-      Besuch eines ethischen Schutzgebiets auf Koh Samui. Füttern, Beobachten, Dschungelwanderung, Mittagessen inklusive.
+      Check-out in Khanom. Transfer per Auto zum Donsak Pier, Fähre nach Koh Samui (ca. 1,5 h).<br>
+      Check-in im Hotel & erste Inselerkundung.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d3')">🛕 12.09. Big Buddha & Wat Plai Laem – Tempeltag</p>
+    <div class="toggle" onclick="toggle('d3')">🐘 11.09. Elefanten & Dschungel</div>
     <div id="d3" class="details">
-      Vormittags Big Buddha, danach Wat Plai Laem. Fotopausen, kleiner Markt, Café-Stopp und optional Thai-Massage am Nachmittag.
+      Besuch des Samui Elephant Sanctuary mit geführter Tour, Fütterung & Spaziergang.<br>
+      Mittagessen & Naturwanderung inklusive.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d4')">⛴️ 13.09. Fähre nach Koh Phangan</p>
+    <div class="toggle" onclick="toggle('d4')">🛕 12.09. Big Buddha & Wat Plai Laem</div>
     <div id="d4" class="details">
-      Fahrt ab Samui Pier nach Thongsala Pier (ca. 30 Min). Check-in, Erkundung der Umgebung, Sonnenuntergang am Strand.
+      Tempelbesichtigungen mit Fotopausen und kleinen Shops/Cafés.<br>
+      Optional Thai-Massage am Nachmittag.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d5')">🌄 14.09. Haad Yuan Beach oder Viewpoint</p>
+    <div class="toggle" onclick="toggle('d5')">⛴️ 13.09. Fähre nach Koh Phangan</div>
     <div id="d5" class="details">
-      Entweder Longtailboot zum Haad Yuan Beach (chill & yoga) oder Dschungelwanderung zum Dome Sila Viewpoint mit Panorama.
+      Check-out in Samui. Kurze Fährfahrt (ca. 30 Min) nach Koh Phangan.<br>
+      Check-in & Erkundung der Umgebung.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d6')">🛶 16.–19.09. Kajaktour, Thai-Kochkurs, Wasserfall</p>
+    <div class="toggle" onclick="toggle('d6')">🌄 14.09. Haad Yuan Beach oder Viewpoint</div>
     <div id="d6" class="details">
-      Freizeit & Aktivitäten nach Lust: Kochkurs mit Marktbesuch, Kajak durch Mangroven, Ausflug zum Namtok Sai Rung Wasserfall.
+      Option A: Longtailboot zum Haad Yuan Beach – Yoga, Relaxen, tropische Kulisse.<br>
+      Option B: Wanderung zum Dome Sila Viewpoint mit Ausblick.
     </div>
 
-    <p class="toggle" onclick="toggleDetails('d7')">✈️ 20.09. Rückreise Koh Samui → Frankfurt</p>
+    <div class="toggle" onclick="toggle('d7')">🚐 15.09. Rückreise nach Khanom</div>
     <div id="d7" class="details">
-      Transfer zum Pier, Fähre nach Samui, Flug via Bangkok nach FRA. Rail&Fly zurück nach Leipzig Hbf am Morgen des 21.09.
+      Rückfahrt: Fähre nach Koh Samui, Transfer via Donsak nach Khanom.<br>
+      Ankunft & Entspannung im Resort.
+    </div>
+
+    <div class="toggle" onclick="toggle('d8')">🧘 16.–19.09. Aktivitäten in Khanom</div>
+    <div id="d8" class="details">
+      • Kochkurs mit Marktbesuch<br>
+      • Kajaktour durch Mangroven<br>
+      • Ausflug zum Namtok Sai Rung Wasserfall<br>
+      • Massage & Souvenirshopping
+    </div>
+
+    <div class="toggle" onclick="toggle('d9')">✈️ 20.09. Rückflug</div>
+    <div id="d9" class="details">
+      Transfer zum Flughafen Koh Samui.<br>
+      Flug via Bangkok nach Frankfurt mit Rail&Fly nach Leipzig am 21.09.
     </div>
   </div>
 </body>
